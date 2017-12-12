@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export class QuoteForm extends Component {
+export default class QuoteForm extends Component {
     constructor(props){
      super(props)
     this.state = {
@@ -42,11 +42,6 @@ handleOnNameChange(event) {
             type="text"
             onChange={(event) => this.handleOnLocationChange(event)}
             placeholder="author" />
-        </p>
-        <p>
-           <input
-            type="checkbox" s
-            onChange={(event) => this.handleOnLocationChange(event)} s/>
         </p>
         <input type="submit" />
         </form>
