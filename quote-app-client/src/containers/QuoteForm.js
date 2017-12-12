@@ -44,9 +44,8 @@ handleOnNameChange(event) {
         </p>
         <p>
            <input 
-            type="checkbox" 
-            onChange={(event) => this.handleOnLocationChange(event)} 
-            placeholder="author" />
+            type="checkbox" s
+            onChange={(event) => this.handleOnLocationChange(event)} s/>
         </p>
         <input type="submit" />
         </form>
