@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 export class QuoteForm extends Component {
-    constructor(){
+    constructor(props){
+     super(props)
     this.state = {
         text: '',
         author: '',
@@ -31,19 +32,19 @@ handleOnNameChange(event) {
   <div>
       <form onSubmit={(event) => this.handleOnSubmit(event)}>
         <p>
-          <input 
-            type="text" 
-            onChange={(event) => this.handleOnNameChange(event)} 
+          <input
+            type="text"
+            onChange={(event) => this.handleOnNameChange(event)}
             placeholder="quote" />
         </p>
         <p>
-          <input 
-            type="text" 
-            onChange={(event) => this.handleOnLocationChange(event)} 
+          <input
+            type="text"
+            onChange={(event) => this.handleOnLocationChange(event)}
             placeholder="author" />
         </p>
         <p>
-           <input 
+           <input
             type="checkbox" s
             onChange={(event) => this.handleOnLocationChange(event)} s/>
         </p>

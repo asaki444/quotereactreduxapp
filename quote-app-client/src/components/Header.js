@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Header = ()=>{
+const Header = ()=>{
 
     return(
         <div className="footer">
@@ -9,3 +9,4 @@ export const Header = ()=>{
     )
 }
 
+export default Header

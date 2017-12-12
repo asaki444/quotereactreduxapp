@@ -5,8 +5,8 @@ import Header from '../components/Header';
 import QuoteForm from '../containers/QuoteForm';
 import Author from '../components/Author';
 import Quote from '../components/Quote'
-import QuoteList from '../components/QuoteList'
-import AuthorList from '../components/AuthorList'
+import QuoteList from '../containers/QuoteList'
+import AuthorList from '../containers/AuthorList'
 class App extends Component {
   render() {
     return (
