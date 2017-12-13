@@ -9,8 +9,10 @@ function quotesReducer(state = {loading:false, quotes:[]}, action) {
 
      case "GET_QUOTES":
      return action.quotes
-     
+
     default:
       return state;
   }
 }
+
+export quotesReducer
