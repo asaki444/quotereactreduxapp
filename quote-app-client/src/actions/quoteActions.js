@@ -9,13 +9,13 @@ export function fetchQuotes(){
   }
 }
 
-export function addQuote(){
-   return(dispatch)=>{
-     dispatch({type: 'ADD_QUOTE'})
-      return fetch('${RAILS_API_URL}/quotes/create',
+export function addQuote(quote){
+      return fetch('${RAILS_API_URL}/quotes',
        {method: 'post',
-     }
-    )
+        body: JSON.stringify(quote),
+        contentType: 'application/json',
+        accepts: 'application/json'}
+    ).then(response=> response.json())
 
    }
 }
