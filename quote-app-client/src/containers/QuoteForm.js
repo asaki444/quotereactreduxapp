@@ -1,24 +1,23 @@
 import React, { Component } from 'react';
 
 export default class QuoteForm extends Component {
-    constructor(props){
-     super(props)
+    constructor(){
+     super()
     this.state = {
         text: '',
-        author: '',
-        categories: []
+        author: ''
       }
     }
 
-handleOnNameChange(event) {
+handleOnTextChange(event) {
     this.setState({
-      name: event.target.value
+      text: event.target.value
     });
   }
 
-  handleOnLocationChange(event) {
+  handleOnAuthorChange(event) {
     this.setState({
-      location: event.target.value
+      author: event.target.value
     });
   }
 
@@ -34,13 +33,13 @@ handleOnNameChange(event) {
         <p>
           <input
             type="text"
-            onChange={(event) => this.handleOnNameChange(event)}
+            onChange={(event) => this.handleOnTextChange(event)}
             placeholder="quote" />
         </p>
         <p>
           <input
             type="text"
-            onChange={(event) => this.handleOnLocationChange(event)}
+            onChange={(event) => this.handleOnAuthorChange(event)}
             placeholder="author" />
         </p>
         <input type="submit" />

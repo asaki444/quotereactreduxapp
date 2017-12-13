@@ -12,4 +12,4 @@ function  authorsReducer (state = {loading:false, authors:[]}, action) {
   }
 }
 
-export authorsReducer
+export default authorsReducer

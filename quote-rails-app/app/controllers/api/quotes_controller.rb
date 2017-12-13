@@ -1,12 +1,12 @@
-class QuotesController < ApplicationController
+class Api::QuotesController < ApplicationController
   def index
    @quotes = Quote.all
-   render :json @quotes
+   render json: @quotes
   end
 
   def show
    quote = Quote.find(id: quote_id)
-   render :json quote
+   render json: quote
   end
 
   def create

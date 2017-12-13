@@ -15,4 +15,4 @@ function quotesReducer(state = {loading:false, quotes:[]}, action) {
   }
 }
 
-export quotesReducer
+export default quotesReducer

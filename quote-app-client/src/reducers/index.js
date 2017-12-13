@@ -7,4 +7,4 @@ const rootReducer = combineReducers({
   authors: authorsReducer
 });
 
-export rootReducer
+export default rootReducer
