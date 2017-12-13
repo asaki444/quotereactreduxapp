@@ -20,7 +20,7 @@ const NavBar = () => {
       activeStyle={{
         background: 'darkblue'
       }}
-    >Directors</NavLink>
+    >Authors</NavLink>
     <NavLink
       to="/quotes"
       activeStyle={{
