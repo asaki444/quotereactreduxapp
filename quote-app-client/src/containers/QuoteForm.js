@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
-
-export default class QuoteForm extends Component {
+import {addQuote} from '../actions/quoteActions';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+class QuoteForm extends Component {
     constructor(){
      super()
     this.state = {
@@ -23,7 +25,7 @@ handleOnTextChange(event) {
 
   handleOnSubmit(event) {
     event.preventDefault();
-
+    this.props.addQuote(this.state)
   }
 
   render() {
@@ -48,3 +50,11 @@ handleOnTextChange(event) {
     );
   }
 }
+
+const mapDispatchToProps = (dispatch) => {
+return bindActionCreators({
+  addQuote: addQuote
+}, dispatch);
+};
+
+export default connect(null, mapDispatchToProps)(QuoteForm)

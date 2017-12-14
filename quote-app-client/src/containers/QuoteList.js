@@ -12,7 +12,7 @@ class Quotes extends Component {
  }
 
  componentDidMount(){
-   this.props.fetchQuotes.then(quotes=>this.setState({quotes}))
+   this.props.fetchQuotes().then(quotes=>this.setState({quotes}))
  }
  render(){
   return(
