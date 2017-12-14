@@ -34,4 +34,4 @@ return bindActionCreators({
 };
 
 
-export default connect(mapDispatchToProps)(Quotes);
+export default connect(null,mapDispatchToProps)(Quotes);
