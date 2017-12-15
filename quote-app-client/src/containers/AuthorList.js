@@ -4,22 +4,16 @@ import { fetchAuthors } from '../actions/authorActions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 class Authors extends Component {
-   constructor (){
-     super()
-       this.state = {
-         authors: []
-       }
-   }
 
    componentDidMount(){
-     this.props.fetchAuthors().then(authors=>this.setState({authors}))
+     this.props.fetchAuthors();
    }
-   render(){
-
+render(){
+ debugger
   return(
     <div>
      <h1>Authors Page</h1>
-     {this.state.authors.map(author=>
+     {this.props.authors.map(author=>
        <Author author={author}/>
     )}
     </div>
@@ -28,6 +22,10 @@ class Authors extends Component {
 }
 }
 
+const mapStateToProps = (state) => {
+  return { authors: state.authors.authors };
+};
+
 const mapDispatchToProps = (dispatch) => {
 return bindActionCreators({
   fetchAuthors: fetchAuthors
@@ -35,4 +33,4 @@ return bindActionCreators({
 };
 
 
-export default connect(mapDispatchToProps)(Authors);
+export default connect(mapStateToProps,mapDispatchToProps)(Authors);

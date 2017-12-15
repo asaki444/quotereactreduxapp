@@ -12,14 +12,14 @@ class Quotes extends Component {
  }
 
  componentDidMount(){
-   this.props.fetchQuotes().then(quotes=>this.setState({quotes}))
+   this.props.fetchQuotes()
  }
  render(){
    debugger
   return(
     <div>
      <h1>Quotes Page</h1>
-     {this.state.quotes.map(quote=>
+     {this.props.quotes.map(quote=>
        <Quote quote={quote}/>)}
     </div>
 
@@ -32,6 +32,9 @@ return bindActionCreators({
   fetchQuotes: fetchQuotes
 }, dispatch);
 };
+const mapStateToProps = (state) => {
+  return { quotes: state.quotes.quotes };
+};
 
 
-export default connect(null,mapDispatchToProps)(Quotes);
+export default connect(mapStateToProps,mapDispatchToProps)(Quotes);

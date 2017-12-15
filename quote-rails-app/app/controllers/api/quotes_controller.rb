@@ -11,7 +11,7 @@ class Api::QuotesController < ApplicationController
 
   def create
     author = Author.find_or_create_by(name: quote_params[:author])
-    quote = Quote.new(text: quote_params, author_id: author[:id])
+    quote = Quote.new(text: quote_params, author_id: author.id)
   end
 
   private
