@@ -15,12 +15,12 @@ class Quotes extends Component {
    this.props.fetchQuotes().then(quotes=>this.setState({quotes}))
  }
  render(){
+   debugger
   return(
     <div>
      <h1>Quotes Page</h1>
      {this.state.quotes.map(quote=>
-       <Quote quote={quote}/>
-    )}
+       <Quote quote={quote}/>)}
     </div>
 
   )

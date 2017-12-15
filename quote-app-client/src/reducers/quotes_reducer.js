@@ -2,7 +2,7 @@ function quotesReducer(state = {loading:false, quotes:[]}, action) {
   switch (action.type) {
 
      case "ADD_QUOTE":
-      return state.quotes.concat(action.quote);
+      return action.quote;
 
      case "LOADING_QUOTES":
      return {...state, loading:true}

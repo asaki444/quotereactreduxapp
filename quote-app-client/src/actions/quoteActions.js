@@ -1,12 +1,12 @@
 import fetch from 'isomorphic-fetch'
 const API_URL = process.env.REACT_APP_API_URL;
 export function fetchQuotes(){
-  return (dispatch)=>{
-    dispatch({type: 'LOADING_QUOTES'})
-    return fetch(`${API_URL}/quotes`)
-      .then(res => res.json())
-      .then(json => dispatch({type: 'FETCH_QUOTES', payload: json}))
-  }
+  return dispatch => {
+  return fetch(`${API_URL}/quotes`)
+    .then(response => response.json())
+    .then(quotes => dispatch({type: "GET_QUOTES", quotes}))
+    .catch(error => console.log(error));
+}
 }
 
 export function addQuote(quote){
