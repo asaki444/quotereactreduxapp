@@ -9,12 +9,11 @@ class Authors extends Component {
      this.props.fetchAuthors();
    }
 render(){
- debugger
   return(
     <div>
      <h1>Authors Page</h1>
      {this.props.authors.map(author=>
-       <Author author={author}/>
+       <Author author={author} key={author.id}/>
     )}
     </div>
 
