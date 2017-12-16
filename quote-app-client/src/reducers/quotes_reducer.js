@@ -7,7 +7,7 @@ function quotesReducer(state = {loading:false, quotes:[]}, action) {
      case "LOADING_QUOTES":
      return {...state, loading:true}
 
-     case "GET_QUOTES":
+     case "FETCH_QUOTES":
      return {loading: false, quotes: action.payload}
 
     default:

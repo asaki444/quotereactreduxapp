@@ -1,15 +1,14 @@
 import React from 'react';
 
 const Quote = (props)=>{
+  debugger
   return(
-   <div>
-    {props.quote.map(quote=>
+
      <div className='Quote'>
-      <h2>{quote.text}</h2>
-      <h3>{quote.author}</h3>
+      <h2>{props.quote.text}</h2>
+      <h3>{props.quote.author}</h3>
     </div>
-  )}
-  </div>
+
   )
 }
 

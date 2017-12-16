@@ -4,7 +4,7 @@ export function fetchQuotes(){
   return dispatch => {
   return fetch(`${API_URL}/quotes`)
     .then(response => response.json())
-    .then(quotes => dispatch({type: "GET_QUOTES", quotes}))
+    .then(quotes => dispatch({type: "FETCH_QUOTES", payload: quotes}))
     .catch(error => console.log(error));
 }
 }

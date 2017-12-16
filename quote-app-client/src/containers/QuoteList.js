@@ -15,12 +15,11 @@ class Quotes extends Component {
    this.props.fetchQuotes()
  }
  render(){
-   debugger
   return(
     <div>
      <h1>Quotes Page</h1>
      {this.props.quotes.map(quote=>
-       <Quote quote={quote}/>)}
+       <Quote quote={quote} key={quote.id}/>)}
     </div>
 
   )
