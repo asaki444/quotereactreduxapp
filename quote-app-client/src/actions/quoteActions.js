@@ -10,23 +10,18 @@ export function fetchQuotes(){
 }
 
 export function addQuote(quote){
-  // return dispatch => {
-  //   return fetch(`${API_URL}/quotes`, {
-  //     method: "POST",
-  //     headers: {
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify({ quote })
-  //   })
-  //     .then(response => response.json())
-  //     .then(quote => {
-  //       dispatch({type: "ADD_QUOTE", payload: quote})
-  //     })
-   // }
-   return dispatch => {
-   fetch(`${API_URL}/quotes`, {
-     method: 'post',
-  body: JSON.stringify(quote)
-}).then(response=>response.json()).then(data => dispatch({type: "ADD_QUOTE", payload:data}));
-}
+  return dispatch => {
+    return fetch(`${API_URL}/quotes`, {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ quote })
+    })
+      .then(response => response.json())
+      .then(quote => {
+        dispatch({type: "ADD_QUOTE", payload: quote})
+      })
+   }
+
  }

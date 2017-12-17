@@ -25,6 +25,7 @@ handleOnTextChange(event) {
 
   handleOnSubmit(event) {
     event.preventDefault();
+
     this.props.addQuote(this.state);
     this.setState({
       text: '',
