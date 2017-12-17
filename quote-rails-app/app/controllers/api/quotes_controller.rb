@@ -4,14 +4,11 @@ class Api::QuotesController < ApplicationController
    render json: @quotes
   end
 
-  def show
-   quote = Quote.find(id: quote_id)
-   render json: quote
-  end
-
   def create
-    author = Author.find_or_create_by(name: params[:author])
-    quote = Quote.new(text: params[:text], author_id: author.id)
+    author = Author.find_or_create_by(name: quote_params[:author])
+    quote = Quote.new(text: quote_params[:text], author_id: author.id)
+    quote.save
+    render json: quote
   end
 
   private
