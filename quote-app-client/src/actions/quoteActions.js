@@ -14,11 +14,12 @@ export function addQuote(quote){
     return fetch(`${API_URL}/quotes`, {
       method: "POST",
       headers: {
+        Accept: 'application/json',
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ quote })
+      body: JSON.stringify({ quote: quote })
     })
-      .then(response => response.json())
+      .then(response => console.log(response))
       .then(quote => {
         dispatch({type: "ADD_QUOTE", payload: quote})
       })
