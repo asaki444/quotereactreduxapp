@@ -9,6 +9,8 @@ class Quotes extends Component {
    this.props.fetchQuotes()
 
  }
+
+
  render(){
   return(
     <div>
@@ -31,4 +33,4 @@ const mapStateToProps = (state) => {
 };
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Quotes);
+export default connect(mapStateToProps,{ fetchQuotes })(Quotes);

@@ -21,6 +21,7 @@ export function addQuote(quote){
     })
       .then(response => console.log(response))
       .then(quote => {
+        console.log(quote)
         dispatch({type: "ADD_QUOTE", payload: quote})
       })
    }
