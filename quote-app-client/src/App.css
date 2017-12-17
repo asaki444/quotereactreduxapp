@@ -18,8 +18,30 @@
   font-size: 1.5em;
 }
 
+.Quote, .Author {
+  border: gray 1px solid;
+  height: 10em;
+  width: 25em;
+  margin: 0 auto;
+  margin-bottom: .5em;
+  background-color: #e0ffff
+}
 
+.Quote h2{
+  margin-top:2em;
+  font-family: arial;
+}
+.Quote h3{
+  font-style: italic;
+}
+.Author{
+  background-color:#EFBAF7
+}
 
+.Author h2{
+  font-style: italic;
+  margin-top: 2.5em;
+}
 .App-intro {
   font-size: large;
 }
