@@ -40,12 +40,13 @@ handleOnTextChange(event) {
           <input
             type="text"
             onChange={(event) => this.handleOnTextChange(event)}
-            placeholder="quote" />
+            placeholder="quote" value={this.state.text}/>
         </p>
         <p>
           <input
             type="text"
             onChange={(event) => this.handleOnAuthorChange(event)}
+            value={this.state.author}
             placeholder="author" />
         </p>
         <input type="submit" />
