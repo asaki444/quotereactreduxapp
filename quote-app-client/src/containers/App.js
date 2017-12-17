@@ -20,10 +20,10 @@ class App extends Component {
        <div className="App">
         <Header />
         <NavBar />
-        <Route path="/" component={Home}/>
-        <Route path="/quotes" component={QuoteList} />
-        <Route path="/quoteform" component={QuoteForm} />
-        <Route path="/authors" component={AuthorList} />
+        <Route exact path="/quotes" component={QuoteList} />
+        <Route exact path="/" component={QuoteForm} />
+        <Route exact path="/authors" component={AuthorList} />
+
         <Footer />
         </ div>
       </ Router>

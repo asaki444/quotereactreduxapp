@@ -18,13 +18,6 @@ const NavBar = () => {
       }}
     >Home</NavLink>
     <NavLink
-      to="/quoteform"
-      exact style={link}
-      activeStyle={{
-        background: 'darkblue'
-      }}
-    >New Quote</NavLink>
-    <NavLink
       to="/authors"
       exact style={link}
       activeStyle={{

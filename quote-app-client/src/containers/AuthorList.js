@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Author from '../components/Author';
 import { fetchAuthors } from '../actions/authorActions';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+
 class Authors extends Component {
 
    componentDidMount(){
@@ -25,11 +25,5 @@ const mapStateToProps = (state) => {
   return { authors: state.authors.authors };
 };
 
-const mapDispatchToProps = (dispatch) => {
-return bindActionCreators({
-  fetchAuthors: fetchAuthors
-}, dispatch);
-};
 
-
-export default connect(mapStateToProps,mapDispatchToProps)(Authors);
+export default connect(mapStateToProps,{ fetchAuthors })(Authors);
