@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import Quote from '../components/Quote';
 import { connect } from 'react-redux';
-import { fetchQuotes } from '../actions/quoteActions'
-import { bindActionCreators } from 'redux';
+import { fetchQuotes } from '../actions/quoteActions';
 class Quotes extends Component {
 
  componentDidMount(){
@@ -23,11 +22,6 @@ class Quotes extends Component {
  }
 }
 
-const mapDispatchToProps = (dispatch) => {
-return bindActionCreators({
-  fetchQuotes: fetchQuotes
-}, dispatch);
-};
 const mapStateToProps = (state) => {
   return { quotes: state.quotes.quotes };
 };

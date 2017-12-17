@@ -35,7 +35,8 @@ handleOnTextChange(event) {
 
   render() {
     return(
-  <div>
+  <div className="quoteform">
+     <h3> Add a Quote! </h3>
       <form onSubmit={(event) => this.handleOnSubmit(event)}>
         <p>
           <input
