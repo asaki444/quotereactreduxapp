@@ -10,6 +10,7 @@ import QuoteForm from '../containers/QuoteForm';
 import QuoteList from '../containers/QuoteList'
 import AuthorList from '../containers/AuthorList'
 import NavBar from '../components/NavBar';
+import Home from '../components/Home'
 import { connect } from 'react-redux';
 
 class App extends Component {
@@ -19,6 +20,7 @@ class App extends Component {
        <div className="App">
         <Header />
         <NavBar />
+        <Route path="/" component={Home}/>
         <Route path="/quotes" component={QuoteList} />
         <Route path="/quoteform" component={QuoteForm} />
         <Route path="/authors" component={AuthorList} />
