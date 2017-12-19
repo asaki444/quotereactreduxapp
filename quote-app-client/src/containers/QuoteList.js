@@ -11,6 +11,7 @@ class Quotes extends Component {
 
 
  render(){
+
   return(
     <div>
      <h1>Quotes Page</h1>
