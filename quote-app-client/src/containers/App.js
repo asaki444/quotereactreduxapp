@@ -18,7 +18,7 @@ class App extends Component {
         <Header />
         <NavBar />
         <Route exact path="/quotes" component={QuoteList} />
-        <Route exact path="/" component={QuoteForm} />
+        <Route exact path="/" component={QuoteForm} />                               
         <Route exact path="/authors" component={AuthorList} />
 
         <Footer />

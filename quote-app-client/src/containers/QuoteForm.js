@@ -25,12 +25,15 @@ handleOnTextChange(event) {
 
   handleOnSubmit(event) {
     event.preventDefault();
+    if(this.state.author!='' || this.state.text!= ''){
 
     this.props.addQuote(this.state);
     this.setState({
       text: '',
       author: ''
     })
+   }
+
   }
 
   render() {
