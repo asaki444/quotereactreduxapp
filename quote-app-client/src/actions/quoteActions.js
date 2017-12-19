@@ -19,10 +19,11 @@ export function addQuote(quote){
       },
       body: JSON.stringify({ quote: quote })
     })
-      .then(response => console.log(response))
-      .then(quote => {
-        console.log(quote)
-        dispatch({type: "ADD_QUOTE", payload: quote})
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+         dispatch({type: "ADD_QUOTE", payload: data}
+        )
       })
    }
 
