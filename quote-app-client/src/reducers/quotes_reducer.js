@@ -1,8 +1,8 @@
-const initialState = {
+
+function quotesReducer(state = {
   loading: false,
   quotes: []
-}
-function quotesReducer(state = initialState, action) {
+}, action) {
   switch (action.type) {
 
      case "ADD_QUOTE":
