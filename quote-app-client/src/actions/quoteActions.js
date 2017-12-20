@@ -28,8 +28,21 @@ export function addQuote(quote){
    }
  }
 
-export function addLike(like){
-  return dispatch =>{
-     dispatch({type: 'ADD_LIKE', likes: like})
-  }
-}
+export function addLike(like,id){
+return dispatch => {
+    return fetch(`${API_URL}/quotes/${id}`, {
+      method: "PATCH", 
+        headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({ likes: like })
+    })
+      .then(response => console.log(response))
+      .then(data => {
+        console.log(data)
+         dispatch({type: "ADD_LIKE", payload: data}
+        )
+      })
+   }
+ }
+ 

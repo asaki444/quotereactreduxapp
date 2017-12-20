@@ -5,8 +5,9 @@ import { connect } from 'react-redux';
 class Quote extends Component{ 
 constructor(){
     super()
+
     this.state = {
-        a: 0
+         a: 0
        }
     }
 
@@ -15,17 +16,17 @@ constructor(){
    this.setState({
      a: c
    })
-   this.props.addLike(this.state.a)
+   this.props.addLike(this.state.a + 1, this.props.quote.id)
   }
 
   render(){
-  	debugger
     return(
 
      <div className='Quote'>
       <h2>{this.props.quote.text}</h2>
       <h3>{this.props.quote.author.name}</h3>
-      <button onClick={this.counter}>Vote</button> <p>{this.props.likes}</p>
+      <button onClick={this.counter}>Vote</button> <p>{this.state.a}</p>
+      <p>Previous Sessions Votes: {this.props.quote.likes}</p>
     </div>
 
    )
@@ -38,8 +39,5 @@ const mapDispatchToProps = (dispatch) => {
 	}, dispatch);
 };
 
-const mapStateToProps = (state) => {
-  return { likes: state.likes};
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(Quote)
+export default connect(null, mapDispatchToProps)(Quote)

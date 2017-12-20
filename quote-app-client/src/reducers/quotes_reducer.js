@@ -15,7 +15,7 @@ function quotesReducer(state = {
      return {...state, loading: false, quotes: action.payload}
      
      case "LIKE_QUOTES":
-     return state
+     return action.likes
 
       default:
       return state;

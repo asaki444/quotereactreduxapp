@@ -11,10 +11,20 @@ class Api::QuotesController < ApplicationController
     render json: quote
   end
 
+  def update 
+    quote = Quote.find_by(id: params[:id])
+    quote.update(likes: params[:likes])
+    render json: quote
+  end 
+  
+  def show 
+  quote = Quote.find_by(id: params[:id])
+  render json: quote
+  end
   private
 
   def quote_params
-    params.require(:quote).permit(:text, :author)
+    params.require(:quote).permit(:text, :author, :likes)
   end
 
 end

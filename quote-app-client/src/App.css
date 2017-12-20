@@ -20,7 +20,7 @@
 
 .Quote, .Author, .quoteform {
   border: gray 1px solid;
-  height: 10em;
+  height: 15em;
   width: 25em;
   margin: 0 auto;
   margin-bottom: .5em;
@@ -29,11 +29,13 @@
 
 .Quote h2{
   margin-top:0.25em;
-  padding-bottom: 1em;
+  margin-bottom: 0em;
   font-family: arial;
 }
+
 .Quote h3{
   font-style: italic;
+  padding-bottom: 0;
 }
 .Author{
   background-color:#EFBAF7
