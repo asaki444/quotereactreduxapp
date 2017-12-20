@@ -26,5 +26,10 @@ export function addQuote(quote){
         )
       })
    }
-
  }
+
+export function addLike(like){
+  return dispatch =>{
+     dispatch({type: 'ADD_LIKE', likes: like})
+  }
+}

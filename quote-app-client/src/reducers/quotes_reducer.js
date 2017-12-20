@@ -1,7 +1,7 @@
 
 function quotesReducer(state = {
   loading: false,
-  quotes: []
+  quotes: [],
 }, action) {
   switch (action.type) {
 
@@ -13,8 +13,11 @@ function quotesReducer(state = {
 
      case "FETCH_QUOTES":
      return {...state, loading: false, quotes: action.payload}
+     
+     case "LIKE_QUOTES":
+     return state
 
-    default:
+      default:
       return state;
   }
 }

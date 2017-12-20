@@ -11,6 +11,7 @@ class QuoteForm extends Component {
       }
     }
 
+
 handleOnTextChange(event) {
     this.setState({
       text: event.target.value
@@ -32,6 +33,7 @@ handleOnTextChange(event) {
       text: '',
       author: ''
     })
+     this.props.history.push('/quotes')
    }
 
   }
