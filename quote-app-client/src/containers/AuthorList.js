@@ -8,6 +8,7 @@ class Authors extends Component {
    componentDidMount(){
      this.props.fetchAuthors();
    }
+
 render(){
   return(
     <div>
