@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 
-const AuthorShow = (props) => {
- const id = parseInt(props.match.params.authorId)
- const author = props.authors.filter(author=> author.id == id )
-  return (
+class AuthorShow extends Component {
+
+ render (){
+ 	debugger
+   const id = parseInt(this.props.match.params.authorId)
+   const author = this.props.authors.filter(author=> author.id == id )
+    return (
     <div>
       <h3> Authors Show Component!</h3>
+      <Link to={"/authors"}> <p> back to authors page</p></Link>
       <h2>{author[0].name}</h2>
       <ul>
         {author[0].quotes.map( quote =>
@@ -14,7 +19,8 @@ const AuthorShow = (props) => {
         	)}
       </ul>
     </div>
-  );
+    ) ;
+   }
 }
 
 const mapStateToProps = (state) => {

@@ -28,14 +28,14 @@ export function addQuote(quote){
    }
  }
 
-export function addLike(like,id){
+export function addLike(like,quote){
 return dispatch => {
-    return fetch(`${API_URL}/quotes/${id}`, {
+    return fetch(`${API_URL}/quotes/${quote.id}`, {
       method: "PATCH", 
         headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({ likes: like })
+      body: JSON.stringify({ likes: quote.likes + 1})
     })
       .then(response => response.json())
       .then(data => {

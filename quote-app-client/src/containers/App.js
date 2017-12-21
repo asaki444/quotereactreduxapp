@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import {
   BrowserRouter as Router,
-  Route, S
+  Route
 } from 'react-router-dom';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
@@ -11,7 +11,11 @@ import QuoteForm from '../containers/QuoteForm';
 import QuoteList from '../containers/QuoteList'
 import AuthorList from '../containers/AuthorList'
 import NavBar from '../components/NavBar';
+
+
 class App extends Component {
+
+
   render() {
     return (
       <Router>
@@ -28,5 +32,6 @@ class App extends Component {
     )
   }
 }
+
 
 export default App;

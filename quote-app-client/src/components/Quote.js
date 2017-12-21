@@ -16,7 +16,7 @@ constructor(){
    this.setState({
      a: c
    })
-   this.props.addLike(this.state.a + 1, this.props.quote.id)
+   this.props.addLike(this.state.a + 1, this.props.quote)
   }
 
   render(){
