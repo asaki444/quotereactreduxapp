@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 const Author = (props)=>{
   return(
      <div className='Author'>
@@ -10,5 +11,7 @@ const Author = (props)=>{
 
   )
 }
+
+
 
 export default Author

@@ -3,9 +3,7 @@ function quotesReducer(state = {
   loading: false,
   quotes: [],
 }, action) {
-  debugger
   switch (action.type) {
-
      case "ADD_QUOTE":
      return Object.assign({}, state, {quotes: state.quotes.concat(action.payload)})
 

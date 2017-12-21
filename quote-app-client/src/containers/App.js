@@ -19,10 +19,9 @@ class App extends Component {
         <Header />
         <NavBar />
         <Route exact path="/quotes" component={QuoteList} />
-        <Route exact path="/" component={QuoteForm} />                               
+        <Route exact path="/" component={QuoteForm} />                                           
         <Route exact path="/authors" component={AuthorList} />
-
-        <Route path={`authors/:authorId`} component={AuthorShow}/>
+        <Route path="/authors/:authorId" component={AuthorShow}/>
         <Footer />
         </ div>
       </ Router>
