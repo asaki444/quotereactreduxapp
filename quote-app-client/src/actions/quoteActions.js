@@ -37,7 +37,7 @@ return dispatch => {
       },
       body: JSON.stringify({ likes: like })
     })
-      .then(response => console.log(response))
+      .then(response => response.json())
       .then(data => {
         console.log(data)
          dispatch({type: "ADD_LIKE", payload: data}
