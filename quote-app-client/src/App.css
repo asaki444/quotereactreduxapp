@@ -18,7 +18,7 @@
   font-size: 1.5em;
 }
 
-.Quote, .Author, .quoteform {
+.Quote, .Author, .quoteform, .authorQuote {
   border: gray 1px solid;
   height: 15em;
   width: 25em;
@@ -60,7 +60,8 @@
 }
 
 .authorQuote{
-  margin-top: 2em;
+  margin-top: 4em;
+  height: 7.5em;
 }
 
 .App-intro {

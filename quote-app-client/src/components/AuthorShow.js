@@ -13,12 +13,10 @@ class AuthorShow extends Component {
       <h3> Authors Show Component!</h3>
       <Link to={"/authors"}> <p> back to authors page</p></Link>
       <h2>{author[0].name}</h2>
-      <ul>
         {author[0].quotes.map( quote =>
-          <li className="authorQuote"> {quote.text} </li>
+          <div className="authorQuote"> <h3>{quote.text} </h3></div>
         	)}
-      </ul>
-    </div>
+     </div>
     ) ;
    }
 }
