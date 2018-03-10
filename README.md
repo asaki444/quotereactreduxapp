@@ -16,3 +16,7 @@ To run this application on the local environment, download this repo.
 And...
 
 ![Alt Text](https://media2.giphy.com/media/3o751ZD56pO0y0pPOw/giphy.gif)
+
+You should be able to add a new quote. 
+
+And it should look like this..
