@@ -4,7 +4,7 @@ const Header = ()=>{
 
     return(
         <div className="header">
-          <h1>Quote React Redux</h1>
+          <h1>Store Your Quotes App</h1>
         </div>
     )
 }

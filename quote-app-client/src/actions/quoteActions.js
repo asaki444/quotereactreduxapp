@@ -28,7 +28,7 @@ export function addQuote(quote){
    }
  }
 
-export function addLike(like,quote){
+export function addLike(quote){
 return dispatch => {
     return fetch(`${API_URL}/quotes/${quote.id}`, {
       method: "PATCH", 

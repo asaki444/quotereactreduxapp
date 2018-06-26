@@ -15,7 +15,11 @@ class Quotes extends Component {
   return(
     <div>
      <h1>Quotes Page</h1>
-     {this.props.quotes.map(quote=>
+     {this.props.quotes.sort( (a,b)=>
+
+     	b.likes - a.likes 
+ 
+     	).map(quote=>
        <Quote quote={quote} key={quote.id}/>)}
     </div>
 

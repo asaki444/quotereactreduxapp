@@ -3,6 +3,7 @@ function quotesReducer(state = {
   loading: false,
   quotes: [],
 }, action) {
+
   switch (action.type) {
      case "ADD_QUOTE":
      return Object.assign({}, state, {quotes: state.quotes.concat(action.payload)})
@@ -11,7 +12,7 @@ function quotesReducer(state = {
      return {...state, loading:true}
 
      case "FETCH_QUOTES":
-     return {...state, loading: false, quotes: action.payload.reverse()}
+     return {...state, loading: false, quotes: action.payload}
      
      case "ADD_LIKE":
      const quoteId = state.quotes.filter(q=> q.id === action.payload.id)[0].id
