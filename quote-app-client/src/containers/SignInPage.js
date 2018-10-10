@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 export default class SignIn extends Component {
 
     constructor(){
@@ -9,8 +9,13 @@ export default class SignIn extends Component {
            password: ''
          }
     }
-
-
+  
+    handleChange = event => {
+        this.setState({
+          [event.target.id]: event.target.value
+        });
+      }
+ 
     LogIn(event){
         event.preventDefault();
         // this.state.password and this.state.username
@@ -20,8 +25,18 @@ export default class SignIn extends Component {
         return (
             <div className="Sign In Form">
                 <form onSubmit={this.LogIn}>
-                    <input type="text" placeholder="username" />
-                    <input type="password" placeholder="password"/>
+                <FormGroup controlId="username">
+                <ControlLabel>Username</ControlLabel>
+                <FormControl value={this.state.username} 
+                    type="username"
+                    onChange={this.handleChange}/>
+                </FormGroup>
+                <FormGroup controlId="password">
+                <ControlLabel>Username</ControlLabel>
+                    <FormControl value={this.state.password} 
+                    type="password"
+                    onChange={this.handleChange}/>
+                </FormGroup>
                 </form>
             </div>
         )

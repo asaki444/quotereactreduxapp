@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-
+import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
 export default class SignUp extends Component {
 
     constructor(){
