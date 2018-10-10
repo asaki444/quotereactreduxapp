@@ -21,6 +21,10 @@ class Quotes extends Component {
  
      	).map(quote=>
        <Quote quote={quote} key={quote.id}/>)}
+
+
+     
+      
     </div>
 
   )
