@@ -11,7 +11,7 @@ import QuoteForm from '../containers/QuoteForm';
 import QuoteList from '../containers/QuoteList'
 import AuthorList from '../containers/AuthorList'
 import NavBar from '../components/NavBar';
-
+import LogInPage from '../components/LogInPage';
 
 class App extends Component {
 
@@ -22,8 +22,9 @@ class App extends Component {
        <div className="App">
         <Header />
         <NavBar />
+        <Route exact path="/" component={LogInPage}/>
         <Route exact path="/quotes" component={QuoteList} />
-        <Route exact path="/" component={QuoteForm} />                                           
+        <Route exact path="/addquote" component={QuoteForm} />                                           
         <Route exact path="/authors" component={AuthorList} />
         <Route path="/authors/:authorId" component={AuthorShow}/>
         <Footer />

@@ -1,18 +1,32 @@
-import React from 'react';
+import React, {Component}from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import SignIn from './containers/SignInPage';
-import LogIn from './containers/LogInPage';
+import SignIn from '../containers/SignInPage';
+import SignUp from '../containers/SignUpPage';
 
-const LogInPage = ()=>{
-    let SignIn = <SignIn/>
-    let LogIn = <SignUp/>
-    return(
-        <div className="LogInHeader">
-          <h1>Log in Or Sign Up to Begin</h1>
-          <button>Log In </button>
-          <button> Sign Up </button>
-            <div id="access">
+export default class LogIn extends Component {
+ constructor(props) {
+        super(props);
+        this.state = {display: true};
+      }
+   
+  displayChange(){
+      if(this.state.display){
+          this.setState({display: false})
+      }
+      else{
+        this.setState({display: true})
+      }
+    }
+  render(){
+        return(
+            <div className="LogInHeader">
+            <h1>Log in Or Sign Up to Begin</h1>
+            <button onClick={this.displayChange.bind(this)}>Sign In </button>
+            <button onClick={this.displayChange.bind(this)}> Sign Up </button>
+            <div class="form">
+            {this.state.display ? <SignIn/> : <SignUp/> }
             </div>
-        </div>
-    )
+            </div>
+        )
+    }
 }
