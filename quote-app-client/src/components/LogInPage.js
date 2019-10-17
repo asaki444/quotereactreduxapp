@@ -1,7 +1,7 @@
 import React, {Component}from 'react';
 import { Button, FormGroup, FormControl, ControlLabel } from "react-bootstrap";
-import SignIn from '../containers/SignInPage';
-import SignUp from '../containers/SignUpPage';
+import SignIn from '../containers/SigninPage';
+import SignUp from '../containers/SignupPage.Js';
 
 export default class LogIn extends Component {
  constructor(props) {
