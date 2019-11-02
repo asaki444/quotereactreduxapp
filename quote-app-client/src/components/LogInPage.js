@@ -23,7 +23,7 @@ export default class LogIn extends Component {
             <h1>Log in Or Sign Up to Begin</h1>
             <button onClick={this.displayChange.bind(this)}>Sign In </button>
             <button onClick={this.displayChange.bind(this)}> Sign Up </button>
-            <div class="form">
+            <div className="form">
             {this.state.display ? <SignIn/> : <SignUp/> }
             </div>
             </div>

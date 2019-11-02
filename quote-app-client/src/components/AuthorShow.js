@@ -9,7 +9,7 @@ class AuthorShow extends Component {
 
  render (){
    const id = parseInt(this.props.match.params.authorId)
-   const author = this.props.authors.filter(author=> author.id == id )
+   const author = this.props.authors.filter(author=> author.id === id )
     return (
         <div>
         <Link to="/authors">Back to Author Page</Link>
