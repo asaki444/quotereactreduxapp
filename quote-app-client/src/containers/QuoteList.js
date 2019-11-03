@@ -15,7 +15,7 @@ class Quotes extends Component {
   return(
     <div>
      <h1>Quotes Page</h1>
-     {this.props.quotes.sort( (a,b)=>
+     {this.props.quotes && this.props.quotes.sort( (a,b)=>
 
      	b.likes - a.likes 
  
