@@ -13,7 +13,7 @@ render(){
   return(
     <div>
      <h1>Authors Page</h1>
-     { this.props.authors && this.props.authors.map(author=>
+     {this.props.authors.map(author=>
        <Author author={author} key={author.id}/>
     )}
     </div>
