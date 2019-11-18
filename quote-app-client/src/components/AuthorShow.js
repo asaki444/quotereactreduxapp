@@ -14,7 +14,7 @@ class AuthorShow extends Component {
         <div>
         <Link to="/authors">Back to Author Page</Link>
           <h2>{author[0].name}</h2>
-          { author[0].quotes?.map( quote=>
+          { author[0].quotes.map( quote=>
           	<div className="authorQuote">
              <h2>{quote.text}</h2>
              </div>
